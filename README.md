@@ -4,9 +4,6 @@ A documentação e outros artefatos que não sejam relacionados a código serão
 
 ### Participantes:
 * [Julien](https://github.com/Josneyo)
-
 * [Murilo](https://github.com/murilonear)
-
 * [Osmar](https://github.com/osmarpixuri)
-
 * [Rodrigo](https://github.com/rodrigaobt)
