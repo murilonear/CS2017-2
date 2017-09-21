@@ -6,6 +6,9 @@ A documentação e outros artefatos que não sejam relacionados a código serão
 
 Instale o node.js, em plataformas linux instale o nvm seguindo https://github.com/creationix/nvm  
 
+Após a instalação, instale o node.js rodando:
+nvm install 8.5.0
+
 Após clonar o projeto, rode na pasta raiz:  
 npm install  
 
