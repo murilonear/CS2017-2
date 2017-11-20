@@ -1,17 +1,27 @@
 {
-  "name": "cs2017-2",
-  "version": "0.0.0",
-  "private": true,
+  "name": "CS2017-2",
+  "version": "1.0.0",
+  "description": "O objetivo desse repositório é publicar os artefatos que serão gerados ao longo da matéria, de forma a suprir as tarefas e desenvolver o produto final.\r A documentação e outros artefatos que não sejam relacionados a código serão disponibilizados na wiki, lá toda a documentação pode ser encontrada em suma de forma rápida.",
+  "main": "app.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/murilonear/CS2017-2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/murilonear/CS2017-2/issues"
+  },
+  "homepage": "https://github.com/murilonear/CS2017-2#readme",
   "dependencies": {
-    "body-parser": "~1.17.1",
-    "cookie-parser": "~1.4.3",
-    "debug": "~2.6.3",
-    "express": "~4.15.2",
-    "hbs": "~4.0.1",
-    "morgan": "~1.8.1",
-    "serve-favicon": "~2.4.2"
+    "express": "^4.16.2",
+    "pug": "^2.0.0-rc.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
   }
 }
