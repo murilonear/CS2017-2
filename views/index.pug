@@ -1,5 +1,56 @@
 extends layout.pug
 
 block content
-    section
-        p Lorem ipsizzle rizzle bizzle amizzle, boofron adipiscing shiz. Nullam sapien velizzle, volutpizzle, suscipizzle quis, gravida vel, gizzle. Pellentesque egizzle tortor. Sed erizzle. Owned at dolizzle dapibus turpis tempizzle fo. Maurizzle owned own yo' izzle turpizzle. Fizzle izzle tortor. Uhuh ... yih! go to hizzle rhoncizzle crazy. In ma nizzle break yo neck, yall bling bling dictumst. Doggy dapibus. Curabitizzle tellizzle urna, pretizzle eu, mattizzle ma nizzle, eleifend go to hizzle, nunc. Daahng dawg i'm in the shizzle. Ass crackalackin velit sizzle yo mamma.
+    main.p-4
+        // Caroussel structure and controllers
+        #carouselExampleControls.carousel.slide(data-ride='carousel')
+            .carousel-inner
+                .carousel-item.active
+                    img.d-block.w-100(src='http://via.placeholder.com/800x400', alt='First slide')
+                .carousel-item
+                    img.d-block.w-100(src='http://via.placeholder.com/800x400', alt='Second slide')
+                .carousel-item
+                    img.d-block.w-100(src='http://via.placeholder.com/800x400', alt='Third slide')
+            a.carousel-control-prev(href='#carouselExampleControls', role='button', data-slide='prev')
+                span.carousel-control-prev-icon(aria-hidden='true')
+                span.sr-only Previous
+            a.carousel-control-next(href='#carouselExampleControls', role='button', data-slide='next')
+                span.carousel-control-next-icon(aria-hidden='true')
+                span.sr-only Next
+        hr
+        // Informations and other content
+        .row.mb-3
+            .col-lg-5.mx-auto
+                .row
+                    .col-lg-3
+                        img.img-fluid.rounded.mx-auto.d-none.d-sm-block(src='http://via.placeholder.com/300x300', alt='Something')
+                    .col-lg-9
+                        p
+                            | Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Interagi no mé, cursus quis, vehicula ac nisi.
+                            | Aenean aliquam molestie leo, vitae iaculis nisl. Manduma pindureta quium dia nois paga. Leite de capivaris,
+                            | leite de mula manquis sem cabeça. Delegadis gente finis, bibendum egestas augue arcu ut est.
+            .col-lg-5.mx-auto
+                .row
+                    .col-lg-3
+                        img.img-fluid.rounded.mx-auto.d-none.d-sm-block(src='http://via.placeholder.com/300x300', alt='Something')
+                    .col-lg-9
+                        p
+                            | Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Interagi no mé, cursus quis, vehicula ac nisi.
+                            | Aenean aliquam molestie leo, vitae iaculis nisl. Manduma pindureta quium dia nois paga. Leite de capivaris,
+                            | leite de mula manquis sem cabeça. Delegadis gente finis, bibendum egestas augue arcu ut est.
+        .row
+            .col-lg-6.mx-auto.mb-3
+                img.img-fluid.mb-2(style='height: 180px; width: 100%; display: block;', src='http://via.placeholder.com/300x180', alt='Card image cap')
+                h4 Mussumipsum
+                p
+                    | Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Interagi no mé, cursus quis, vehicula ac nisi.
+                p
+                    small.text-muted Last updated 5 mins ago
+            .col-lg-6.mx-auto.mb-3
+                img.img-fluid.mb-2(style='height: 180px; width: 100%; display: block;', src='http://via.placeholder.com/300x180', alt='Card image cap')
+                h4 Impsummussum
+                p
+                    | Aenean aliquam molestie leo, vitae iaculis nisl. Manduma pindureta quium dia nois paga. Leite de capivaris,
+                    | leite de mula manquis sem cabeça. Delegadis gente finis, bibendum egestas augue arcu ut est.
+                p
+                    small.text-muted Last updated 3 mins ago

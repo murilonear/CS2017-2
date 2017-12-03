@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/murilonear/CS2017-2#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "cookieparser": "^0.1.0",
     "express": "^4.16.2",
     "pug": "^2.0.0-rc.4"
   },

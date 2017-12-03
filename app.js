@@ -1,31 +1,17 @@
-var express = require("express");
-var app = express();
-var router = express.Router();
-var path = __dirname + '/views/';
+const express = require('express');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
 
-var app = express();
-// app.use(bodyParser.urlencoded({ extended: false}));
+const app = express();
+app.use(bodyParser.urlencoded({ extended: false}));
 
-// app.set('view engine', 'pug');
+app.use(cookieParser());
+app.use('/static', express.static('public'));
+app.set('view engine', 'pug');
 
-// // app.use(express.static(__dirname + '/public'));
+const mainRoutes = require('./routes');
 
-// app.get('/', (req, res) => {
-//   res.render('index');
-// });
-
-// app.use(express.static(__dirname + '/public'));
-
-router.use(function (req,res,next) {
-  console.log("/" + req.method);
-  next();
-});
-
-router.get("/",function(req,res){
-  res.sendFile(path + "index.html");
-});
-
-app.use("/",router);
+app.use(mainRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -36,15 +22,11 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
+  res.locals.error = err;
+  res.status(err.status);
+  res.render('error', err);
 });
 
-app.listen(8080, () => {
-  console.log('The application is running on localhost:8080!');
+app.listen(3000, () => {
+  console.log('The application is running on localhost:3000!');
 });
