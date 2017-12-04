@@ -37,6 +37,13 @@ module.exports = function (app, passport) {
         });
     });
 
+    // PROFILE ==============================
+    app.get('/profile', (req, res) => {
+        res.render('profile', {
+            user : req.user // get the user out of session and pass to template
+        });
+    });
+
     // LOGOUT ==============================
     app.get('/logout', (req, res) => {
         req.logout();

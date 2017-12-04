@@ -8,6 +8,8 @@ var userSchema = mongoose.Schema({
     local            : {
         email        : String,
         password     : String,
+        nameuser     : String,
+        cpf          : String,
     }
 
 });
