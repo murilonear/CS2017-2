@@ -1,26 +1,36 @@
+const User = require('../routes/models/user');
+const Vehicle = require('../routes/models/vehicle');
+
 module.exports = function (app, passport) {
+    var newUser = new User();
 
     // HOME PAGE (with login links) ========
     // Requisições feitas no URL "/" irão renderizar o index
     app.get('/', (req, res) => {
-        res.render('index');
+        res.render('index', {
+            user: req.user // get the user out of session and pass to template
+        });
     });
 
     // LOGIN ===============================
     app.get('/login', (req, res) => {
-        res.render('login', { message: req.flash('loginMessage') });
+        res.render('login', {
+            message: req.flash('loginMessage')
+        });
     });
 
     // process the login form
     app.post('/login', passport.authenticate('local-login', {
-        successRedirect : '/profile', // redirect to the secure profile section
-        failureRedirect : '/login', // redirect back to the signup page if there is an error
-        failureFlash : true // allow flash messages
+        successRedirect: '/profile', // redirect to the secure profile section
+        failureRedirect: '/login', // redirect back to the signup page if there is an error
+        failureFlash: true // allow flash messages
     }));
 
     // SIGNUP ==============================
     app.get('/signup', (req, res) => {
-        res.render('signup', { message: req.flash('signupMessage') });
+        res.render('signup', {
+            message: req.flash('signupMessage')
+        });
     });
 
     // process the signup form
@@ -33,15 +43,25 @@ module.exports = function (app, passport) {
     // CARS ==============================
     app.get('/cars', (req, res) => {
         res.render('cars', {
-            user : req.user // get the user out of session and pass to template
+            user: req.user // get the user out of session and pass to template
         });
     });
 
+    app.post('/cars', passport.authenticate('add-car', {
+        successRedirect: '/profile', // redirect to the secure profile section
+        failureRedirect: '/signup', // redirect back to the signup page if there is an error
+        failureFlash: true // allow flash messages
+    }));
+
     // PROFILE ==============================
     app.get('/profile', (req, res) => {
-        res.render('profile', {
-            user : req.user // get the user out of session and pass to template
-        });
+        if (req.user) {
+            res.render('profile', {
+                user: req.user // get the user out of session and pass to template
+            });
+        } else {
+            res.redirect('/login');
+        }
     });
 
     // LOGOUT ==============================

@@ -10,6 +10,9 @@ var userSchema = mongoose.Schema({
         password     : String,
         nameuser     : String,
         cpf          : String,
+        cars         : {
+            name     : String,
+        },
     }
 
 });

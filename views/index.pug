@@ -2,55 +2,41 @@ extends layout.pug
 
 block content
     main.p-4
-        // Caroussel structure and controllers
-        #carouselExampleControls.carousel.slide(data-ride='carousel')
-            .carousel-inner
-                .carousel-item.active
-                    img.d-block.w-100(src='http://via.placeholder.com/800x400', alt='First slide')
-                .carousel-item
-                    img.d-block.w-100(src='http://via.placeholder.com/800x400', alt='Second slide')
-                .carousel-item
-                    img.d-block.w-100(src='http://via.placeholder.com/800x400', alt='Third slide')
-            a.carousel-control-prev(href='#carouselExampleControls', role='button', data-slide='prev')
-                span.carousel-control-prev-icon(aria-hidden='true')
-                span.sr-only Previous
-            a.carousel-control-next(href='#carouselExampleControls', role='button', data-slide='next')
-                span.carousel-control-next-icon(aria-hidden='true')
-                span.sr-only Next
+        .cover-inner.container.text-center.p-3
+            h1.jumbotron-heading
+                | Say 
+                em hello
+                |  to our&#x9;
+                strong Startup UI Kit
+            |   
+            p.lead
+                | A collection of coded HTML and CSS elements to help your build your startup website. Clean design, fully responsive and based on Bootstrap 4.   
+            p.pt-4
+                a.btn.btn-primary.btn-lg.mb-2.mr-2.ml-2(href='#') Register
         hr
         // Informations and other content
-        .row.mb-3
-            .col-lg-5.mx-auto
+        section.features-1.text-center
+            .container
+                h2 Features
+                .divider
                 .row
-                    .col-lg-3
-                        img.img-fluid.rounded.mx-auto.d-none.d-sm-block(src='http://via.placeholder.com/300x300', alt='Something')
-                    .col-lg-9
+                    .col-md-4.col-feature
+                        .rounded-circle.justify-center
+                            em.fa.fa-2x.fa-paint-brush
+                        h4 Clean Design
                         p
-                            | Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Interagi no mé, cursus quis, vehicula ac nisi.
-                            | Aenean aliquam molestie leo, vitae iaculis nisl. Manduma pindureta quium dia nois paga. Leite de capivaris,
-                            | leite de mula manquis sem cabeça. Delegadis gente finis, bibendum egestas augue arcu ut est.
-            .col-lg-5.mx-auto
-                .row
-                    .col-lg-3
-                        img.img-fluid.rounded.mx-auto.d-none.d-sm-block(src='http://via.placeholder.com/300x300', alt='Something')
-                    .col-lg-9
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed sem sagittis cursus.
+
+                    .col-md-4.col-feature
+                        .rounded-circle.justify-center
+                            em.fa.fa-2x.fa-desktop
+                        h4 Responsive
                         p
-                            | Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Interagi no mé, cursus quis, vehicula ac nisi.
-                            | Aenean aliquam molestie leo, vitae iaculis nisl. Manduma pindureta quium dia nois paga. Leite de capivaris,
-                            | leite de mula manquis sem cabeça. Delegadis gente finis, bibendum egestas augue arcu ut est.
-        .row
-            .col-lg-6.mx-auto.mb-3
-                img.img-fluid.mb-2(style='height: 180px; width: 100%; display: block;', src='http://via.placeholder.com/300x180', alt='Card image cap')
-                h4 Mussumipsum
-                p
-                    | Mais vale um bebadis conhecidiss, que um alcoolatra anonimis. Interagi no mé, cursus quis, vehicula ac nisi.
-                p
-                    small.text-muted Last updated 5 mins ago
-            .col-lg-6.mx-auto.mb-3
-                img.img-fluid.mb-2(style='height: 180px; width: 100%; display: block;', src='http://via.placeholder.com/300x180', alt='Card image cap')
-                h4 Impsummussum
-                p
-                    | Aenean aliquam molestie leo, vitae iaculis nisl. Manduma pindureta quium dia nois paga. Leite de capivaris,
-                    | leite de mula manquis sem cabeça. Delegadis gente finis, bibendum egestas augue arcu ut est.
-                p
-                    small.text-muted Last updated 3 mins ago
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed sem sagittis cursus.
+
+                    .col-md-4.col-feature
+                        .rounded-circle.justify-center
+                            em.fa.fa-2x.fa-code
+                        h4 Bootstrap 4
+                        p
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus erat sed sem sagittis cursus.

@@ -1,28 +1,28 @@
 header
-  nav.navbar.navbar-expand-md.navbar-light.bg-light
-    a.navbar-brand(href='#')
-      i.fa.fa-rebel(aria-hidden='true')
-      |             Example
+  nav.navbar.navbar-expand-lg.navbar-light.navbar-custom.mt-2
+    a.navbar-brand(href='#') 
+    |          Project
     // Toggle button for small screens
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#collapsingNavbar', aria-controls='collapsingNavbar', aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
     #collapsingNavbar.navbar-collapse.collapse
-      ul.navbar-nav.mx-auto.w-100.justify-content-center
-        li.nav-item.active
+      ul.navbar-nav.mx-auto.justify-content-center
+        li.nav-item
           a.nav-link(href='/') Home 
             span.sr-only (current)
         li.nav-item
           a.nav-link(href='cars') Cars
         li.nav-item
-          a.nav-link(href='bikes') Bikes
-        li.nav-item
-          a.nav-link(href='promotion') Promotions
-        li.nav-item
           a.nav-link(href='other') Other
-      i.fa.fa-rebel(aria-hidden='true')  
-      a.nav-link(href='login')
-        .mx-auto.justify-content-center
-        |         Login
+        li.nav-item  
+      if user
+        a(href='profile')
+          .mx-auto.justify-content-center
+          |         Profile
+      else
+        a(href='login')
+          .mx-auto.justify-content-center
+          |         Login
       //- // Login interface that
       //- .dropdown
       //-   a.dropdown-toggle(href='#', data-toggle='dropdown')

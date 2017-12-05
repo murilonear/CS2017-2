@@ -1,3 +1,41 @@
 extends layout
 
 block content
+    section.content-4
+        .container
+            .row.justify-center.mt-5
+                .col-md-6.pl-5.pr-5.text-center
+                    img.mb-4.img-fluid(src='static/images/hr-v.png')
+                .col-md-6.text-left
+                    h2 HR-V Eco Sport.
+                    p.lead.mt-4.mb-5
+                        | Integer libero nunc, elementum eu venenatis sed, molestie non tortor. Duis suscipit pulvinar justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    .row
+                        .col-md-6.col-feature.mb-4
+                            h4.mb-3 Clean Design
+                            p
+                                | Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        .col-md-6.col-feature.mb-4
+                            h4.mb-3 Bootstrap 4
+                            p
+                                | Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    p.pt-4
+                        a.btn.btn-primary.btn-lg.mb-2.mr-2.ml-2(href='/logout') Logout
+            .row.justify-center.mt-5
+                .col-md-6.text-left
+                    h2 Sport Onix.
+                    p.lead.mt-4.mb-5
+                        | Integer libero nunc, elementum eu venenatis sed, molestie non tortor. Duis suscipit pulvinar justo. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    .row
+                        .col-md-6.col-feature.mb-4
+                            h4.mb-3 Clean Design
+                            p
+                                | Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                        .col-md-6.col-feature.mb-4
+                            h4.mb-3 Bootstrap 4
+                            p
+                                | Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    form(action='/cars', method='post')
+                        button.btn.btn-primary.btn-lg.mb-2.mr-2.ml-2(type='submit', name='onix') Logout
+                .col-md-6.pl-5.pr-5.text-center
+                    img.mb-4.img-fluid(src='static/images/onix.png')
