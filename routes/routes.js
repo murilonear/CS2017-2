@@ -47,11 +47,14 @@ module.exports = function (app, passport) {
         });
     });
 
-    app.post('/cars', passport.authenticate('add-car', {
-        successRedirect: '/profile', // redirect to the secure profile section
-        failureRedirect: '/signup', // redirect back to the signup page if there is an error
-        failureFlash: true // allow flash messages
-    }));
+    app.post('/cars', (req, res) => {
+        const car = req.cookies.car;
+        if (car){
+            res.redirect('/profile');
+        } else {
+            res.redirect('')
+        }
+    });
 
     // PROFILE ==============================
     app.get('/profile', (req, res) => {

@@ -27,34 +27,6 @@ module.exports = function (passport) {
         });
     });
 
-    passport.use('add-car', new LocalStrategy({
-        // by default, local strategy uses username and password, we will override with email
-        usernameField: 'email',
-        passwordField: 'password',
-        passReqToCallback: true // allows us to pass back the entire request to the callback
-    },
-        function (req, email, password, done) { // callback with email and password from our form
-            // find a user whose email is the same as the forms email
-            // we are checking to see if the user trying to login already exists
-            console.log("This is the email"+ email);
-            User.findOne({
-                'local.email': email
-            }, function (err, user) {
-                // if there are any errors, return the error
-                if (err)
-                    return done(err);
-                // check to see if theres already a user with that email
-                if (user) {
-                    // set the user's local credential
-                    newUser.local.cpf = req.body.onix;
-                } else {
-                    return done(null, false, req.flash('loginMessage', 'Please login first.'));
-                }
-
-            });
-
-        }));
-
     // =========================================================================
     // LOCAL SIGNUP ============================================================
     // =========================================================================
