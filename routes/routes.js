@@ -47,13 +47,12 @@ module.exports = function (app, passport) {
         });
     });
 
-    app.post('/cars', (req, res) => {
-        const car = req.cookies.car;
-        if (car){
-            res.redirect('/profile');
-        } else {
-            res.redirect('')
-        }
+    app.get('/api/v1/car', (req, res) => {
+        res.send({car: 'HR-V'});
+    });
+
+    app.get('/api/v2/car', (req, res) => {
+        res.send({car: 'Sport Onix'});
     });
 
     // PROFILE ==============================
